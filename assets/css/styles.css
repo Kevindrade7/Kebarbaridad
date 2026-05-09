@@ -1119,71 +1119,92 @@
   visibility: visible !important;
   filter: none !important;
 }
-.promo-overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(8px);
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
 .promo-box{
 background:#f8f7f3;
-padding:3rem;
-width:560px;
-max-width:92%;
+padding:2.2rem;
+width:420px;
+max-width:88%;
 text-align:center;
 position:relative;
-border-radius:6px;
-}
-
-.promo-close{
-position:absolute;
-right:20px;
-top:20px;
-background:none;
-border:none;
-font-size:1.3rem;
-cursor:pointer;
+border-radius:4px;
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+border:1px solid rgba(0,0,0,.06);
 }
 
 .promo-tag{
-font-size:.75rem;
-letter-spacing:.3em;
+display:inline-block;
+padding:.45rem 1rem;
+background:#ece7dc;
+border-radius:20px;
+font-size:.62rem;
+letter-spacing:.28em;
+font-family:'Inter',sans-serif;
 color:#9b7740;
-margin-bottom:1rem;
+margin-bottom:1.4rem;
+font-weight:500;
 }
 
 .promo-box h2{
-font-family:var(--ff-serif);
-font-size:6rem;
+font-family:'Cormorant Garamond',serif;
+font-size:4.8rem;
+font-weight:600;
+line-height:.9;
 color:#9b7740;
 margin:0;
+font-style:italic;
 }
 
 .promo-box h3{
+font-family:'Cormorant Garamond',serif;
 font-size:2rem;
-margin-bottom:1rem;
+font-weight:500;
+color:#231f20;
+margin:.4rem 0 1rem;
+line-height:1.1;
+}
+
+.promo-box p{
+font-family:'Inter',sans-serif;
+font-size:.92rem;
+line-height:1.7;
+color:#8a8a8a;
+max-width:300px;
+margin:0 auto 1.7rem;
 }
 
 .promo-form{
 display:flex;
-margin-top:2rem;
+height:52px;
+margin-top:1.5rem;
 }
 
 .promo-form input{
 flex:1;
-padding:1rem;
 border:1px solid #ddd;
+padding:0 1rem;
+font-size:.95rem;
+background:white;
 }
 
 .promo-form button{
-padding:1rem 2rem;
+padding:0 1.6rem;
 background:#231f20;
-color:white;
+color:#fff;
 border:none;
+font-size:.75rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+font-weight:500;
 cursor:pointer;
+}
+
+.promo-close{
+position:absolute;
+top:18px;
+right:18px;
+background:none;
+border:none;
+font-size:1.1rem;
+cursor:pointer;
+opacity:.7;
 }
