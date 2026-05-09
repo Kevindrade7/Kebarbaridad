@@ -1119,6 +1119,17 @@
   visibility: visible !important;
   filter: none !important;
 }
+.promo-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
 .promo-box{
 background:#f8f7f3;
 padding:2.2rem;
@@ -1129,6 +1140,15 @@ position:relative;
 border-radius:4px;
 box-shadow:0 25px 60px rgba(0,0,0,.12);
 border:1px solid rgba(0,0,0,.06);
+}
+.promo-close{
+position:absolute;
+right:20px;
+top:20px;
+background:none;
+border:none;
+font-size:1.3rem;
+cursor:pointer;
 }
 
 .promo-tag{
