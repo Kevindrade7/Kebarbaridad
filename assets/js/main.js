@@ -24,14 +24,14 @@ function subscribePromo(){
   const savedEmails = JSON.parse(localStorage.getItem('kb_clients')) || [];
 
   if(savedEmails.includes(email)){
-    alert('Ya te tenemos como cliente. Tu descuento sigue guardado.');
+    alert('Ya formas parte de Kebarbaridad. Tu ventaja exclusiva sigue activa.');
     return;
   }
 
   savedEmails.push(email);
   localStorage.setItem('kb_clients', JSON.stringify(savedEmails));
 
-  alert('Bienvenido a Ke Barbaridad. Tu 10% ya está reservado.');
+ alert('Bienvenido. Tu acceso al 10% exclusivo ha quedado activado.');
 
   closePromo();
 }
