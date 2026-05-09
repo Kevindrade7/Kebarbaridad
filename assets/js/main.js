@@ -6,5 +6,5 @@ function closePromo(){
 window.onload = function(){
  setTimeout(()=>{
    document.getElementById('promoPopup').style.display='flex';
- },1500);
+ },2500);
 }
