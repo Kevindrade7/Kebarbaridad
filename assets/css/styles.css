@@ -1306,12 +1306,16 @@ width:92%;
 max-width:980px;
 height:86vh;
 
-background:#f8f7f3;
-border-radius:8px;
+background:#f5f2eb;
+border:1px solid rgba(155,119,64,.18);
+border-radius:6px;
+
 overflow:hidden;
 position:relative;
 
-box-shadow:0 30px 80px rgba(0,0,0,.22);
+box-shadow:
+0 40px 120px rgba(0,0,0,.25),
+0 0 0 1px rgba(255,255,255,.35) inset;
 }
 
 .calendly-close{
@@ -1319,18 +1323,62 @@ position:absolute;
 top:18px;
 right:18px;
 
-width:42px;
-height:42px;
+width:46px;
+height:46px;
 
 border:none;
-background:rgba(255,255,255,.95);
 border-radius:50%;
 
-font-size:1.2rem;
+background:rgba(245,242,235,.95);
+backdrop-filter:blur(8px);
+
+font-size:1rem;
+font-weight:500;
+color:#231f20;
+
 cursor:pointer;
-z-index:20;
+z-index:50;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.25s;
 }
 
+.calendly-close:hover{
+transform:scale(1.06);
+background:#9b7740;
+color:white;
+}
 .calendly-box iframe{
 border:none;
+}
+.calendly-head{
+padding:2rem 2rem 1.2rem;
+background:#f5f2eb;
+border-bottom:1px solid rgba(155,119,64,.12);
+text-align:center;
+}
+
+.cal-tag{
+font-size:.65rem;
+letter-spacing:.32em;
+text-transform:uppercase;
+color:#9b7740;
+margin-bottom:.8rem;
+font-family:var(--ff-sans);
+}
+
+.calendly-head h2{
+font-family:var(--ff-serif);
+font-size:2.4rem;
+font-weight:500;
+margin:0;
+line-height:1;
+color:#231f20;
+}
+
+.calendly-head p{
+margin:.7rem 0 0;
+font-size:.9rem;
+color:#7d7d7d;
 }
