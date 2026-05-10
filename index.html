@@ -42,7 +42,7 @@
         <div class="nav-actions">
   <a href="https://kebarbaridad.com/cart" class="btn-cart">🛒 Carrito</a>
 
- <a href="https://calendly.com/kebarbaridad-kebarbaridad/corte-basico" class="btn-reservar" target="_blank">
+<a href="#" class="btn-reservar" onclick="event.preventDefault();openCalendly()">
   Reservar
 </a>
 </div>
@@ -401,6 +401,22 @@ href="https://wa.me/34608720222?text=Me%20gustaria%20reservar%20una%20decoloraci
      <input id="promoEmail" type="email" placeholder="tu@correo.com">
      <button onclick="subscribePromo()">Suscribirme</button>
     </div>
+  </div>
+</div>
+  <div id="calendlyPopup" class="calendly-overlay">
+  <div class="calendly-box">
+
+    <button onclick="closeCalendly()" class="calendly-close">
+      ✕
+    </button>
+
+    <iframe
+      src="https://calendly.com/kebarbaridad-kebarbaridad/corte-basico"
+      width="100%"
+      height="100%"
+      frameborder="0">
+    </iframe>
+
   </div>
 </div>
 <script defer src="./assets/js/main.js"></script>
