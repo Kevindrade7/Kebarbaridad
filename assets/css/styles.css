@@ -1228,3 +1228,35 @@ font-size:1.1rem;
 cursor:pointer;
 opacity:.7;
 }
+/* ── FIX popup móvil ── */
+@media (max-width: 480px) {
+  .pop {
+    padding: 2rem 1.2rem;
+    margin: 0 .5rem;
+    max-height: 95svh;
+    overflow-y: auto;
+  }
+  .pop-form {
+    flex-direction: column;
+    border: none;
+    gap: .5rem;
+  }
+  .pop-input {
+    width: 100%;
+    border: 1.5px solid var(--rule);
+    border-radius: 3px;
+    padding: .85rem 1rem;
+  }
+  .pop-submit {
+    width: 100%;
+    border-radius: 3px;
+    padding: .9rem 1rem;
+    text-align: center;
+  }
+  .pop-pct {
+    font-size: 3.5rem;
+  }
+  .pop-subtitle {
+    font-size: 1rem;
+  }
+}
