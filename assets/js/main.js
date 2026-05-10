@@ -35,3 +35,15 @@ function subscribePromo(){
 
   closePromo();
 }
+function openCalendly(){
+  document.getElementById('calendlyPopup').style.display = 'flex';
+}
+
+function closeCalendly(){
+  document.getElementById('calendlyPopup').style.display = 'none';
+}
+document.getElementById('calendlyPopup').addEventListener('click', function(e){
+  if(e.target === this){
+    closeCalendly();
+  }
+});
