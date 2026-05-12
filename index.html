@@ -410,15 +410,39 @@ href="https://wa.me/34608720222?text=Me%20gustaria%20reservar%20una%20decoloraci
 
     <button class="calendly-close" onclick="closeCalendly()">×</button>
 
-    <div class="calendly-head">
-      <div class="cal-tag">KE BARBARIDAD</div>
-      <h2>Reserva tu experiencia</h2>
-      <p>Selecciona fecha y hora para tu próxima visita</p>
+    <!-- PASO 1 -->
+    <div id="serviceSelect">
+
+      <div class="calendly-head">
+        <div class="cal-tag">KE BARBARIDAD</div>
+        <h2>Reserva tu experiencia</h2>
+        <p>Selecciona el servicio</p>
+      </div>
+
+      <div class="service-buttons">
+
+        <button onclick="loadCalendly('https://calendly.com/kebarbaridad-kebarbaridad/corte-basico?hide_gdpr_banner=1')">
+          Corte básico
+        </button>
+
+        <button onclick="loadCalendly('https://calendly.com/kebarbaridad-kebarbaridad/corte-barba?hide_gdpr_banner=1')">
+          Corte + Barba
+        </button>
+
+        <button onclick="loadCalendly('https://calendly.com/kebarbaridad-kebarbaridad/corte-nino?hide_gdpr_banner=1')">
+          Corte niño
+        </button>
+
+      </div>
+
     </div>
 
+    <!-- PASO 2 -->
     <iframe
-      src="https://calendly.com/kebarbaridad-kebarbaridad/corte-basico?hide_gdpr_banner=1"
-      loading="lazy">
+      id="calendlyFrame"
+      src=""
+      loading="lazy"
+      style="display:none;">
     </iframe>
 
   </div>
