@@ -404,21 +404,25 @@ href="https://wa.me/34608720222?text=Me%20gustaria%20reservar%20una%20decoloraci
     </div>
   </div>
 </div>
-<div class="calendly-modal" id="calendlyModal">
+<div id="calendlyPopup" class="calendly-overlay">
 
-<button class="calendly-close"
-onclick="closeCalendly()">
-×
-</button>
+  <div class="calendly-box">
 
-<div class="calendly-box">
+    <button class="calendly-close" onclick="closeCalendly()">×</button>
 
-<iframe
-src="https://calendly.com/kebarbaridad-kebarbaridad/corte-basico"
-allowfullscreen>
-</iframe>
+    <div class="calendly-head">
+      <div class="cal-tag">KE BARBARIDAD</div>
+      <h2>Reserva tu experiencia</h2>
+      <p>Selecciona fecha y hora para tu próxima visita</p>
+    </div>
 
-</div>
+    <iframe
+      src="https://calendly.com/kebarbaridad-kebarbaridad/corte-basico?hide_gdpr_banner=1"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
 </div>
 
 <script defer src="./assets/js/main.js"></script>
