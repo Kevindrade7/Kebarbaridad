@@ -1312,3 +1312,189 @@ font-family:var(--ff-sans);
 background:#9b7740;
 transform:translateY(-2px);
 }
+
+  POP-UP PRÓTESIS — KEBARBARIDAD
+   Archivo: popup-protesis.css
+═══════════════════════════════════════ */
+
+.ke-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.ke-overlay--visible {
+  display: block;
+  opacity: 1;
+}
+
+.ke-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  z-index: 9999;
+  background: #231f20;
+  border: 0.5px solid rgba(201, 168, 76, 0.25);
+  border-radius: 6px;
+  width: 92%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px 32px 32px;
+  font-family: 'Barlow', sans-serif;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #c9a84c #231f20;
+}
+.ke-popup--visible {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.ke-popup__close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #c9a84c;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+.ke-popup__close:hover {
+  opacity: 1;
+}
+
+.ke-popup__topline {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9a84c, #e6c96e, #c9a84c, transparent);
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.ke-popup__kicker {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.ke-popup__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 700;
+  color: #c9a84c;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.ke-popup__title em {
+  font-style: italic;
+  color: #e6c96e;
+}
+
+.ke-popup__sub {
+  text-align: center;
+  color: #c9a84c;
+  opacity: 0.7;
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+.ke-popup__photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ke-photo {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ke-photo img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.ke-photo__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(35, 31, 32, 0.92));
+  padding: 24px 0 14px;
+  text-align: center;
+}
+.ke-photo__label span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  color: #c9a84c;
+  font-weight: 600;
+}
+
+.ke-popup__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.ke-pill {
+  background: #c9a84c;
+  color: #231f20;
+  font-size: 11px;
+  padding: 7px 14px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+.ke-popup__divider {
+  width: 50px;
+  height: 1px;
+  background: #c9a84c;
+  margin: 0 auto 18px;
+  opacity: 0.4;
+}
+
+.ke-popup__body {
+  text-align: center;
+  color: #c9a84c;
+  opacity: 0.75;
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.ke-popup__contact {
+  text-align: center;
+  color: #c9a84c;
+  opacity: 0.5;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+
+@media (max-width: 480px) {
+  .ke-popup { padding: 36px 16px 28px; }
+  .ke-popup__photos { gap: 8px; }
+}
