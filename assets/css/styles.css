@@ -1312,7 +1312,6 @@ font-family:var(--ff-sans);
 background:#9b7740;
 transform:translateY(-2px);
 }
-
 /* ═══════════════════════════════════════
    POP-UP PRÓTESIS — KEBARBARIDAD
    Pega esto al final de tu styles.css
@@ -1348,6 +1347,7 @@ transform:translateY(-2px);
   overflow-y: auto;
   padding: 40px 32px 32px;
   font-family: 'Barlow', sans-serif;
+  text-align: center;
   scrollbar-width: thin;
   scrollbar-color: #c9a84c #231f20;
 }
@@ -1355,7 +1355,6 @@ transform:translateY(-2px);
   display: block;
 }
 
-/* Botón cerrar */
 .ke-popup__close {
   position: absolute;
   top: 14px;
@@ -1371,7 +1370,6 @@ transform:translateY(-2px);
 }
 .ke-popup__close:hover { opacity: 1; }
 
-/* Línea dorada superior */
 .ke-popup__topline {
   height: 2px;
   background: linear-gradient(90deg, transparent, #c9a84c, #e6c96e, #c9a84c, transparent);
@@ -1379,41 +1377,28 @@ transform:translateY(-2px);
   margin-bottom: 28px;
 }
 
-/* Animación fundido + subida — estado inicial */
+/* Animaciones escalonadas */
 .ke-anim {
   opacity: 0;
   transform: translateY(14px);
 }
-/* Cuando se activa */
 .ke-anim--play {
   animation: keFadeUp 0.65s ease forwards;
   animation-delay: var(--d, 0s);
 }
 @keyframes keFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-/* Las fotos además hacen un suave zoom al aparecer */
 .ke-photo.ke-anim--play {
   animation: kePhotoIn 0.8s ease forwards;
   animation-delay: var(--d, 0s);
 }
 @keyframes kePhotoIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .ke-popup__kicker {
-  text-align: center;
   font-size: 10px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -1431,7 +1416,6 @@ transform:translateY(-2px);
   font-size: clamp(26px, 4.5vw, 44px);
   font-weight: 700;
   color: #c9a84c;
-  text-align: center;
   line-height: 1.1;
   margin-bottom: 8px;
 }
@@ -1441,7 +1425,6 @@ transform:translateY(-2px);
 }
 
 .ke-popup__sub {
-  text-align: center;
   color: #c9a84c;
   opacity: 0;
   font-size: clamp(13px, 2vw, 15px);
@@ -1459,7 +1442,6 @@ transform:translateY(-2px);
   gap: 12px;
   margin-bottom: 24px;
 }
-
 .ke-photo {
   position: relative;
   border-radius: 4px;
@@ -1516,24 +1498,46 @@ transform:translateY(-2px);
 }
 
 .ke-popup__body {
-  text-align: center;
   color: #c9a84c;
   opacity: 0;
   font-size: clamp(13px, 1.8vw, 15px);
   font-weight: 300;
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 24px;
 }
 .ke-popup__body.ke-anim--play {
   animation: keFadeUp 0.65s ease forwards;
   animation-delay: var(--d, 0s);
 }
 
+/* Botón WhatsApp */
+.ke-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+}
+.ke-wa-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+}
+
 .ke-popup__contact {
-  text-align: center;
   color: #c9a84c;
   opacity: 0;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   font-weight: 300;
 }
@@ -1545,4 +1549,5 @@ transform:translateY(-2px);
 @media (max-width: 480px) {
   .ke-popup { padding: 36px 16px 28px; }
   .ke-popup__photos { gap: 8px; }
+  .ke-wa-btn { width: 100%; justify-content: center; }
 }
